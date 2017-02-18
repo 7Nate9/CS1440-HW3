@@ -1,0 +1,80 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/Nate/CLionProjects/HW3  -Triangles/Edge.cpp
+cmath
+-
+complex
+-
+Edge.h
+C:/Users/Nate/CLionProjects/HW3  -Triangles/Edge.h
+Utils.h
+C:/Users/Nate/CLionProjects/HW3  -Triangles/Utils.h
+
+C:/Users/Nate/CLionProjects/HW3  -Triangles/Edge.h
+Point.h
+C:/Users/Nate/CLionProjects/HW3  -Triangles/Point.h
+
+C:/Users/Nate/CLionProjects/HW3  -Triangles/Point.cpp
+string
+-
+cmath
+-
+Point.h
+C:/Users/Nate/CLionProjects/HW3  -Triangles/Point.h
+Edge.h
+C:/Users/Nate/CLionProjects/HW3  -Triangles/Edge.h
+Utils.h
+C:/Users/Nate/CLionProjects/HW3  -Triangles/Utils.h
+
+C:/Users/Nate/CLionProjects/HW3  -Triangles/Point.h
+string
+-
+
+C:/Users/Nate/CLionProjects/HW3  -Triangles/Triangle.cpp
+Triangle.h
+C:/Users/Nate/CLionProjects/HW3  -Triangles/Triangle.h
+Utils.h
+C:/Users/Nate/CLionProjects/HW3  -Triangles/Utils.h
+cmath
+-
+
+C:/Users/Nate/CLionProjects/HW3  -Triangles/Triangle.h
+string
+-
+Point.h
+C:/Users/Nate/CLionProjects/HW3  -Triangles/Point.h
+Edge.h
+C:/Users/Nate/CLionProjects/HW3  -Triangles/Edge.h
+
+C:/Users/Nate/CLionProjects/HW3  -Triangles/Utils.cpp
+algorithm
+-
+string
+-
+sstream
+-
+fstream
+-
+cmath
+-
+Utils.h
+C:/Users/Nate/CLionProjects/HW3  -Triangles/Utils.h
+
+C:/Users/Nate/CLionProjects/HW3  -Triangles/Utils.h
+string
+-
+fstream
+-
+
+C:/Users/Nate/CLionProjects/HW3  -Triangles/main.cpp
+iostream
+-
+Triangle.h
+C:/Users/Nate/CLionProjects/HW3  -Triangles/Triangle.h
+

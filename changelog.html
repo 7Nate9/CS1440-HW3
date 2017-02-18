@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Change Log</title>
+</head>
+<body>
+<table>
+    <tbody>
+    <tr>
+        <th scope="col"><b>Test Suite</b></th>
+        <th scope="col"><b>Test Case</b></th>
+        <th scope="col"><b>Observed Failure</b></th>
+        <th scope="col"><b>Fix</b></th>
+    </tr>
+    <tr>
+        <td>PointTester::testConstructorWithDoubles</td>
+        <td>Point(0,0,0)</td>
+        <td>m_valid was false, should have been true.</td>
+        <td>Changed the implementation of Point::checkForInfinity from "m_valid = (m_x != INFINITY && m_y != INFINITY && m_z == INFINITY);" to "m_valid = (m_x != INFINITY && m_y != INFINITY && m_z != INFINITY);" </td>
+    </tr>
+    <tr>
+        <td>PointTester::testIsEquivalentTo</td>
+        <td>A point with itself</td>
+        <td>Returned false, should have returned true.</td>
+        <td>Changed the fifth line of the definition of Edge::getLength from "double diffY = m_point2->getY() - m_point1->getX();" to "double diffY = m_point2->getY() - m_point1->getY();"<br>
+        Changed the fourth line of the definition of Point::isEquivalentTo from "return edge.getLength() > m_minDistance;" to "return edge.getLength() < m_minDistance;"</td>
+    </tr>
+    <tr>
+        <td>EdgeTester::testEdge01</td>
+        <td>Edge::getSlopeZ</td>
+        <td>Slope was infinity, should have been 0.</td>
+        <td>Changed line 10 of the definition of Edge::getSlopeZ from "if (xyOffset != 0)" to "if (xyOffset == 0)"</td>
+    </tr>
+    <tr>
+        <td>TriangleTester::testConstructorWithStrings</td>
+        <td>Triangle::getTriangleType</td>
+        <td>Returned type N (Not a Triangle), expected type S (Scalene Triangle)</td>
+        <td>Changed line 4 of the definition of Triangle::getTriangleType from "if (!isTriangle())" to "if (isTriangle())"</td>
+    </tr>
+    <tr>
+        <td>TriangleTester::testConstructorWithStrings</td>
+        <td>Triangle::getTriangleType</td>
+        <td>Returned type I (Isoceles Triangle), expected type S (Scalene Triangle)</td>
+        <td>Changed line 16 of the definition of Triangle::getTriangleType from "approximatelyEquals(c, c, m_edgeLengthThreshold))" to "approximatelyEquals(c, a, m_edgeLengthThreshold))"</td>
+    </tr>
+    <tr>
+        <td>Execute TriangleTester::testConstructorWithStrings</td>
+        <td>Triangle::computerArea</td>
+        <td>Returned area of -21.9995, expected 9.35414</td>
+        <td>Changed line 10 of the definition of Triangle::computerArea from "double s = ( a + b + b)/2;" to "double s = ( a + b + c)/2;"</td>
+    </tr>
+    <tr>
+        <td>TriangleTester::testEquilateralTriangles</td>
+        <td>Triangle::isTriangle</td>
+        <td>Returned false, expected true</td>
+        <td>Changed line 6 of the definition of Point::initialize from "m_y = convertStringToDouble(values[2], &m_valid);" to "m_z = convertStringToDouble(values[2], &m_valid);"<br>
+        Changed line 7 of the definition of Triangle::Triangle (the one that takes a string argument) from "m_points[2] = new Point(values[1]);" to "m_points[2] = new Point(values[2]);"</td>
+    </tr>
+
+    </tbody>
+</table>
+</body>
+</html>
